@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Endoscopy — Biomedical Equipment Portfolio</title>
+<style>
+:root{color-scheme:dark;--bg:#061427;--bg2:#0a2236;--teal:#2dd4bf;--teal2:#0f766e;--tx:#eaf6f6;--mu:#9bb8c4;--card:rgba(255,255,255,.05);--bd:rgba(45,212,191,.25);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font:17px/1.65 Georgia,'Times New Roman',serif}
+h1,h2,h3,.sans,nav,.tag,th{font-family:'Segoe UI',system-ui,-apple-system,Helvetica,Arial,sans-serif}
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--teal),#38bdf8);z-index:20}
+section{min-height:100vh;padding:90px 6vw;position:relative;overflow:hidden}
+section:nth-of-type(even){background:linear-gradient(160deg,var(--bg2),var(--bg))}
+.wrap{max-width:1080px;margin:auto;position:relative;z-index:2}
+.tag{color:var(--teal);letter-spacing:.2em;font-size:.75rem;text-transform:uppercase}
+h2{font-size:clamp(1.8rem,4vw,2.8rem);margin:.2em 0 .6em;font-weight:700;letter-spacing:-.01em}
+h2 span{color:var(--teal)}
+h3{margin:.2em 0;color:var(--teal);font-size:1.05rem}
+p{color:#cfe3e8;margin:.6em 0}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:20px;backdrop-filter:blur(6px);transition:transform .3s,border-color .3s}
+.card:hover{transform:translateY(-6px);border-color:var(--teal)}
+.rv{opacity:0;transform:translateY(34px);transition:opacity .9s,transform .9s}.rv.on{opacity:1;transform:none}
+.cap{font:italic .8rem 'Segoe UI',sans-serif;color:var(--mu)}
+/* cover */
+#cover{display:flex;align-items:center;background:radial-gradient(ellipse at 70% 50%,#0d4a55 0,var(--bg) 70%)}
+.lumen{position:absolute;right:-12vw;top:50%;width:70vmin;height:70vmin;margin-top:-35vmin;border-radius:50%;background:radial-gradient(circle,#000 0 6%,#3a0f1a 22%,#8a3345 55%,#2b0a14 100%);box-shadow:0 0 80px rgba(45,212,191,.35),inset 0 0 60px #000;opacity:.8;overflow:hidden;animation:sway 9s ease-in-out infinite}
+.lumen i{position:absolute;inset:0;border-radius:50%;border:2px solid rgba(255,150,170,.35);animation:fly 6s linear infinite;opacity:0}
+.lumen i:nth-child(2){animation-delay:1.5s}.lumen i:nth-child(3){animation-delay:3s}.lumen i:nth-child(4){animation-delay:4.5s}
+.lumen:after{content:"";position:absolute;inset:0;border-radius:50%;background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.25),transparent 25%)}
+@keyframes fly{0%{transform:scale(.05);opacity:0}15%{opacity:.9}100%{transform:scale(1.5);opacity:0}}
+@keyframes sway{50%{transform:translate(-14px,10px) rotate(4deg)}}
+#cover:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 38px,rgba(45,212,191,.05) 38px 39px)}
+#cover h1{font-size:clamp(2.6rem,9vw,6.5rem);line-height:.95;margin:.1em 0;letter-spacing:-.03em}
+#cover h1 em{font-style:normal;color:var(--teal)}
+.who{margin-top:28px;font:.95rem/1.8 'Segoe UI',sans-serif;color:var(--mu);border-left:3px solid var(--teal);padding-left:16px}
+.who b{color:var(--tx)}
+.hint{position:absolute;bottom:24px;left:6vw;z-index:3;color:var(--mu);font:.8rem sans-serif;animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(8px)}}
+.note{display:inline-block;margin-top:14px;font:.7rem sans-serif;color:var(--mu);border:1px dashed var(--bd);padding:3px 10px;border-radius:99px}
+/* flow */
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:26px 0}
+.fb{flex:1 1 120px;text-align:center;padding:14px 8px;border-radius:12px;background:var(--card);border:1px solid var(--bd);font:600.85rem sans-serif;position:relative;animation:glow 6s infinite}
+.fb:nth-child(2){animation-delay:1s}.fb:nth-child(3){animation-delay:2s}.fb:nth-child(4){animation-delay:3s}.fb:nth-child(5){animation-delay:4s}.fb:nth-child(6){animation-delay:5s}
+@keyframes glow{0%,14%{box-shadow:0 0 22px var(--teal);border-color:var(--teal)}20%,100%{box-shadow:none}}
+.ar{color:var(--teal);font-size:1.3rem}
+ol.st{counter-reset:s;padding:0;list-style:none}
+ol.st li{counter-increment:s;padding:10px 0 10px 54px;position:relative;color:#cfe3e8}
+ol.st li:before{content:counter(s);position:absolute;left:0;top:8px;width:36px;height:36px;border-radius:50%;background:var(--teal2);display:grid;place-items:center;font:700 .9rem sans-serif;color:#fff}
+/* svg */
+svg{max-width:100%;height:auto}
+.dash{stroke-dasharray:8 8;animation:dsh 1.2s linear infinite}@keyframes dsh{to{stroke-dashoffset:-16}}
+.lab text{fill:var(--tx);font:12px sans-serif}.lab line{stroke:var(--teal);stroke-width:1}
+.tc svg{width:100%;height:110px}
+.tc small{color:var(--mu);font:.78rem sans-serif}
+table{width:100%;border-collapse:collapse;font-size:.92rem;overflow:hidden;border-radius:12px}
+th{background:var(--teal2);text-align:left;padding:10px}td{padding:10px;border-bottom:1px solid var(--bd);color:#cfe3e8}
+.scroll{overflow-x:auto}
+.two{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+ul{padding-left:1.1em;color:#cfe3e8}li{margin:.35em 0}
+.pro h3{color:#5eead4}.con h3{color:#fbbf77}
+.chk li{list-style:none;position:relative}.chk li:before{content:"✓";color:var(--teal);position:absolute;margin-left:-1.2em}
+.pulse{animation:pl 2.4s infinite}@keyframes pl{50%{opacity:.45}}
+blockquote{margin:30px 0 0;padding:18px 24px;border-left:3px solid var(--teal);font-size:1.3rem;font-style:italic;color:var(--tx)}
+footer{padding:30px 6vw;text-align:center;color:var(--mu);font:.8rem sans-serif;border-top:1px solid var(--bd)}
+nav{position:fixed;right:14px;top:50%;transform:translateY(-50%);z-index:20;display:flex;flex-direction:column;gap:9px}
+nav a{width:9px;height:9px;border-radius:50%;background:#2a4a5a;display:block}nav a.on{background:var(--teal);box-shadow:0 0 10px var(--teal)}
+@media(max-width:700px){nav{display:none}.lumen{opacity:.4}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style></head><body>
+<div id="bar"></div><nav id="nav"></nav>
+
+<section id="cover"><div class="lumen"><i></i><i></i><i></i><i></i></div>
+<div class="wrap"><div class="tag">A Biomedical Equipment Portfolio</div>
+<h1>ENDO<em>SCOPY</em></h1>
+<p style="font-size:1.35rem;max-width:560px">Principles, Types, Components and Clinical Applications</p>
+<div class="who"><b>Hema G</b> · RA2311013010006<br>B.Tech Biomedical Engineering<br>21BMC402J — Biomedical Equipments for Clinical Applications<br>SRM Institute of Science and Technology, Kattankulathur</div>
+<p class="tag" style="margin-top:26px">Engineering precision. Enabling visualization. Advancing patient care.</p>
+<span class="note">Animated lumen view: illustrative simulation, not a clinical image</span></div>
+<div class="hint">scroll ↓</div></section>
+
+<section id="intro"><div class="wrap">
+<div class="tag rv">01 · Abstract &amp; Introduction</div><h2 class="rv">Seeing inside, <span>without the incision</span></h2>
+<div class="two"><div class="rv"><h3>Abstract</h3><p>Endoscopy is a minimally invasive technique that examines internal structures through a specialised instrument called an endoscope. It lets clinicians visualise organs, identify abnormalities, collect tissue samples and perform selected therapeutic procedures without large surgical incisions.</p><p>Modern endoscopy combines optical imaging, illumination, electronic image processing and precision instrumentation. This portfolio covers the working principle, components, types, applications, advantages, limitations and safety of endoscopic equipment.</p></div>
+<div class="rv"><h3>Introduction</h3><p>Traditional surgery may need large incisions to reach internal organs, whereas endoscopy inspects many structures through natural openings or small incisions. An endoscope delivers light into the body and captures images using optical lenses, fibre-optic bundles or a miniature camera, viewed directly or on a monitor.</p><p>It is widely used in gastroenterology, pulmonology, urology, gynaecology and general surgery. For biomedical engineers it spans optics, illumination, electronic imaging, mechanical design, sterilisation and electrical safety.</p></div></div>
+<div class="rv" style="margin-top:20px"><svg viewBox="0 0 760 200" role="img" aria-label="Open surgery versus endoscopic approach">
+<g fill="none" stroke="#2dd4bf" stroke-width="2"><ellipse cx="170" cy="100" rx="95" ry="70" fill="rgba(45,212,191,.08)"/><path d="M95 70 L245 130" stroke="#fb7185" stroke-width="4"/><ellipse cx="590" cy="100" rx="95" ry="70" fill="rgba(45,212,191,.08)"/><path d="M495 100 Q540 60 585 95" class="dash"/><circle cx="585" cy="95" r="5" fill="#2dd4bf"/></g>
+<g fill="#eaf6f6" font-family="sans-serif" font-size="13" text-anchor="middle"><text x="170" y="188">Open surgery: large incision</text><text x="590" y="188">Endoscopy: natural opening or small port</text></g></svg>
+<div class="cap">Conceptual comparison of open and minimally invasive access.</div></div></div></section>
+
+<section id="principle"><div class="wrap">
+<div class="tag rv">02 · Working Principle</div><h2 class="rv">Light in, <span>image out</span></h2>
+<p class="rv">Endoscopy illuminates an internal cavity, captures reflected light from tissue and transmits the image to the clinician: illumination, collection, transmission, then processing and display.</p>
+<div class="flow rv"><div class="fb">Light Source</div><span class="ar">→</span><div class="fb">Illumination Channel</div><span class="ar">→</span><div class="fb">Internal Tissue</div><span class="ar">→</span><div class="fb">Optics / Image Sensor</div><span class="ar">→</span><div class="fb">Image Processor</div><span class="ar">→</span><div class="fb">Medical Monitor</div></div>
+<div class="rv"><svg viewBox="0 0 420 250" role="img" aria-label="Endoscope path through the upper GI tract"><g fill="rgba(251,113,133,.15)" stroke="#fb7185" stroke-width="2"><path d="M60 20 Q75 20 75 40 V100 Q75 120 95 125 Q150 120 190 150 Q210 190 160 195 Q110 190 95 160 Q85 140 75 130" fill="none"/><path d="M200 150 Q260 110 330 150 Q380 200 300 210 Q240 200 280 170 Q320 150 260 150" fill="none"/></g><path d="M60 20 V100 Q75 125 105 140 Q150 160 180 170" fill="none" stroke="#2dd4bf" stroke-width="7" stroke-linecap="round" class="dash"/><circle cx="180" cy="170" r="9" fill="#fff" class="pulse"/><path d="M180 170 L240 120" stroke="#fff" stroke-opacity=".4" stroke-dasharray="3 5"/><g class="lab"><line x1="60" y1="60" x2="20" y2="60"/><text x="10" y="52">Oesophagus</text><line x1="150" y1="175" x2="150" y2="230"/><text x="110" y="244">Stomach (scope tip)</text><line x1="290" y1="128" x2="330" y2="90"/><text x="300" y="82">Intestine</text></g></svg><div class="cap">Schematic: a gastroscope enters through the mouth and passes down the oesophagus to the stomach.</div></div>
+<ol class="st rv"><li><b>Light generation.</b> An external LED or other source produces light delivered to the site.</li><li><b>Tissue illumination.</b> Light travels through the endoscope onto internal tissue.</li><li><b>Image acquisition.</b> Fibre-optic scopes relay the image through coherent bundles; video endoscopes capture it with a miniature CMOS sensor.</li><li><b>Image processing.</b> Electronics process the image and send it to the display.</li><li><b>Clinical interpretation.</b> The clinician looks for inflammation, bleeding, growths or other change.</li></ol></div></section>
+
+<section id="components"><div class="wrap">
+<div class="tag rv">03 · Major Components</div><h2 class="rv">Anatomy of a <span>flexible video endoscope</span></h2>
+<div class="rv"><svg viewBox="0 0 800 330" role="img" aria-label="Labelled flexible endoscope diagram">
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#2dd4bf"/></linearGradient></defs>
+<rect x="40" y="95" width="70" height="120" rx="18" fill="#12364a" stroke="#2dd4bf" stroke-width="2"/>
+<circle cx="75" cy="130" r="20" fill="#0a2236" stroke="#2dd4bf"/><circle cx="75" cy="130" r="6" fill="#2dd4bf"/>
+<path d="M110 150 H250 Q420 150 470 220 T700 250" fill="none" stroke="url(#g)" stroke-width="16" stroke-linecap="round"/>
+<path d="M700 250 q40 -2 62 -28" fill="none" stroke="#7dd3fc" stroke-width="16" stroke-linecap="round"/>
+<circle cx="765" cy="218" r="9" fill="#fff" class="pulse"/>
+<path d="M75 215 V290 H330" fill="none" stroke="#2dd4bf" stroke-width="6" stroke-dasharray="2 8" stroke-linecap="round" class="dash"/>
+<rect x="330" y="270" width="80" height="40" rx="8" fill="#12364a" stroke="#2dd4bf"/><text x="370" y="295" fill="#eaf6f6" font-size="12" text-anchor="middle" font-family="sans-serif">Light/Video</text>
+<g class="lab"><line x1="75" y1="95" x2="75" y2="45"/><text x="75" y="38" text-anchor="middle">Control section</text>
+<line x1="300" y1="150" x2="300" y2="90"/><text x="300" y="82" text-anchor="middle">Insertion tube</text>
+<line x1="560" y1="235" x2="600" y2="180"/><text x="600" y="172" text-anchor="middle">Working channel · air / water</text>
+<line x1="740" y1="241" x2="700" y2="290"/><text x="690" y="306" text-anchor="middle">Bending section</text>
+<line x1="765" y1="209" x2="740" y2="150"/><text x="735" y="142" text-anchor="middle">Distal tip: lens + LED/light guide</text>
+<line x1="200" y1="290" x2="200" y2="318"/><text x="200" y="326" text-anchor="middle">Umbilical cable</text></g></svg>
+<div class="cap">Schematic of a flexible gastrointestinal video endoscope. Only parts present on this model are labelled.</div></div>
+<div class="two rv" style="margin-top:26px"><div><svg viewBox="0 0 300 300" role="img" aria-label="Endoscopy tower"><g stroke="#2dd4bf" stroke-width="2" fill="#12364a"><rect x="40" y="10" width="220" height="110" rx="8"/><rect x="70" y="20" width="160" height="90" fill="#3a0f1a"/><circle cx="150" cy="65" r="30" fill="#8a3345" class="pulse"/><rect x="142" y="120" width="16" height="20"/><rect x="60" y="140" width="180" height="34" rx="4"/><rect x="60" y="180" width="180" height="34" rx="4"/><rect x="60" y="220" width="180" height="34" rx="4"/><rect x="50" y="260" width="200" height="12" rx="4"/></g><g class="lab"><text x="110" y="162">Video processor</text><text x="118" y="202">Light source</text><text x="108" y="242">Insufflator / pump</text><text x="112" y="140" fill="#fff" font-size="0"> </text><text x="98" y="290">Cart with wheels</text></g><text x="150" y="8" fill="#9bb8c4" font-size="11" text-anchor="middle" font-family="sans-serif">Medical monitor</text></svg><div class="cap">Endoscopy tower: monitor above processor, light source and pump.</div></div><div><svg viewBox="0 0 300 300" role="img" aria-label="Distal tip face"><circle cx="150" cy="140" r="110" fill="#12364a" stroke="#2dd4bf" stroke-width="3"/><circle cx="150" cy="130" r="42" fill="#0a2236" stroke="#7dd3fc" stroke-width="3"/><circle cx="150" cy="130" r="16" fill="#38bdf8" class="pulse"/><circle cx="70" cy="100" r="20" fill="#fff" class="pulse"/><circle cx="230" cy="100" r="20" fill="#fff" class="pulse"/><circle cx="150" cy="215" r="26" fill="#0a2236" stroke="#2dd4bf" stroke-width="3"/><rect x="112" y="60" width="14" height="10" fill="#2dd4bf"/><g class="lab"><line x1="150" y1="88" x2="150" y2="20"/><text x="150" y="14" text-anchor="middle">Objective lens + CMOS sensor</text><line x1="60" y1="92" x2="20" y2="60"/><text x="8" y="52">Light guide</text><line x1="240" y1="92" x2="270" y2="60"/><text x="225" y="52">Light guide</text><line x1="176" y1="230" x2="230" y2="270"/><text x="175" y="288">Working channel</text><line x1="120" y1="65" x2="90" y2="30" stroke="none"/></g></svg><div class="cap">Front view of a typical distal tip (schematic).</div></div></div>
+<div class="grid" style="margin-top:24px">
+<div class="card rv"><h3>Insertion tube</h3><p>Flexible or rigid part introduced into the body; construction depends on the procedure.</p></div>
+<div class="card rv"><h3>Light source</h3><p>LED-based or other high-intensity illumination delivered to the tip.</p></div>
+<div class="card rv"><h3>Optics / image sensor</h3><p>Fibre bundles or a miniature electronic sensor collect reflected light.</p></div>
+<div class="card rv"><h3>Camera &amp; video processor</h3><p>Produces the image sent to the medical monitor.</p></div>
+<div class="card rv"><h3>Eyepiece / monitor</h3><p>Optical scopes use an eyepiece; video systems use a medical-grade display.</p></div>
+<div class="card rv"><h3>Control section</h3><p>Angulation controls and valves for the instrument channels.</p></div>
+<div class="card rv"><h3>Working channel</h3><p>Passage for biopsy, suction or therapeutic accessories.</p></div>
+<div class="card rv"><h3>Suction, air &amp; water</h3><p>Support suction, lens washing or insufflation; functions vary by scope.</p></div></div></div></section>
+
+<section id="types"><div class="wrap">
+<div class="tag rv">04 · Types of Endoscopes</div><h2 class="rv">Six instruments, <span>six regions</span></h2>
+<div class="grid" id="tg"></div>
+<p class="cap rv" style="margin-top:14px">Stylised silhouettes, not to scale.</p></div></section>
+
+<section id="gi"><div class="wrap">
+<div class="tag rv">05 · GI Endoscopy &amp; Laparoscopy</div><h2 class="rv">Flexible <span>versus</span> rigid</h2>
+<div class="two"><div class="card rv"><h3>Gastrointestinal endoscopy</h3><p>A flexible instrument examines the digestive tract: a gastroscope via the mouth, a colonoscope via the anus. After preparation, the scope is inserted under supervision, the lining is inspected, a biopsy or treatment may be done, and the instrument is reprocessed per manufacturer instructions.</p></div>
+<div class="card rv"><h3>Laparoscopy</h3><p>A rigid laparoscope enters through a small incision to view the abdominal or pelvic cavity, in an operating-room setup with controlled insufflation. Additional ports admit surgical instruments while the image appears on a monitor.</p></div></div>
+<div class="rv" style="margin-top:22px"><svg viewBox="0 0 760 260" role="img" aria-label="Laparoscopic setup"><ellipse cx="200" cy="170" rx="170" ry="70" fill="rgba(45,212,191,.1)" stroke="#2dd4bf" stroke-width="2"/><ellipse cx="200" cy="170" rx="60" ry="28" fill="rgba(251,113,133,.2)" stroke="#fb7185"/><g stroke="#eaf6f6" stroke-width="5" stroke-linecap="round"><path d="M200 20 V150"/><path d="M110 40 L165 150" stroke="#7dd3fc"/><path d="M290 40 L235 150" stroke="#7dd3fc"/></g><rect x="180" y="8" width="40" height="26" rx="5" fill="#12364a" stroke="#2dd4bf"/><path d="M220 20 H470" stroke="#2dd4bf" stroke-width="3" class="dash" fill="none"/><rect x="470" y="30" width="180" height="120" rx="8" fill="#12364a" stroke="#2dd4bf" stroke-width="2"/><rect x="482" y="42" width="156" height="96" fill="#3a0f1a"/><circle cx="560" cy="90" r="26" fill="#8a3345" class="pulse"/><g class="lab"><text x="200" y="250" text-anchor="middle">Abdomen (CO₂ insufflated)</text><text x="228" y="60">Laparoscope + camera</text><text x="60" y="34">Instrument port</text><text x="250" y="34" font-size="0"> </text><text x="530" y="170">Monitor</text></g></svg><div class="cap">Schematic of laparoscopy: camera port, two instrument ports and the surgeon’s monitor.</div></div>
+<div class="scroll rv" style="margin-top:22px"><table><tr><th>Feature</th><th>Gastroscopy</th><th>Laparoscopy</th></tr>
+<tr><td>Instrument</td><td>Usually flexible</td><td>Usually rigid</td></tr><tr><td>Access</td><td>Natural body opening</td><td>Small surgical incision</td></tr>
+<tr><td>Main region</td><td>Upper GI tract</td><td>Abdominal or pelvic cavity</td></tr><tr><td>Imaging</td><td>Optical or video</td><td>Usually camera-based video</td></tr>
+<tr><td>Typical purpose</td><td>Diagnosis and selected therapy</td><td>Minimally invasive surgery</td></tr></table></div></div></section>
+
+<section id="clinical"><div class="wrap">
+<div class="tag rv">06 · Clinical Applications</div><h2 class="rv">One technology, <span>many specialties</span></h2>
+<div class="rv"><svg viewBox="0 0 760 380" role="img" aria-label="Body map of endoscopy specialties"><path d="M380 20 C330 20 330 80 350 100 C290 110 250 130 250 190 V300 Q250 350 290 360 H470 Q510 350 510 300 V190 C510 130 470 110 410 100 C430 80 430 20 380 20Z" fill="rgba(45,212,191,.08)" stroke="#2dd4bf" stroke-width="2"/><g fill="#2dd4bf" class="pulse"><circle cx="340" cy="150" r="8"/><circle cx="420" cy="150" r="8"/><circle cx="365" cy="205" r="8"/><circle cx="380" cy="260" r="8"/><circle cx="380" cy="330" r="8"/><circle cx="262" cy="130" r="8"/></g><g class="lab"><line x1="332" y1="150" x2="150" y2="130"/><text x="20" y="134">Pulmonology: bronchoscope</text><line x1="357" y1="205" x2="150" y2="205"/><text x="20" y="209">Gastro: gastroscope</text><line x1="372" y1="260" x2="150" y2="280"/><text x="20" y="284">Colonoscope / laparoscope</text><line x1="372" y1="330" x2="150" y2="350"/><text x="20" y="354">Urology: cystoscope</text><line x1="428" y1="150" x2="560" y2="130"/><text x="565" y="134">Gynae: hysteroscope</text><line x1="254" y1="130" x2="200" y2="90"/><text x="120" y="84">Orthopaedics: arthroscope (joints)</text></g></svg><div class="cap">Schematic map linking each specialty to its endoscope and region (positions approximate).</div></div>
+<div class="grid">
+<div class="card rv"><h3>Gastroenterology</h3><p>Oesophagus, stomach and intestines; ulcers, inflammation, lesions, biopsy.</p><small class="cap">Gastroscope · Colonoscope</small></div>
+<div class="card rv"><h3>General surgery</h3><p>Laparoscopic gallbladder removal and appendectomy with smaller incisions.</p><small class="cap">Laparoscope</small></div>
+<div class="card rv"><h3>Pulmonology</h3><p>Airway examination and respiratory sampling.</p><small class="cap">Bronchoscope</small></div>
+<div class="card rv"><h3>Urology</h3><p>Urethra and bladder evaluation; selected interventions.</p><small class="cap">Cystoscope</small></div>
+<div class="card rv"><h3>Orthopaedics</h3><p>Joint visualisation and minimally invasive joint procedures.</p><small class="cap">Arthroscope</small></div>
+<div class="card rv"><h3>Gynaecology</h3><p>Hysteroscopy of the uterine cavity; selected laparoscopic procedures.</p><small class="cap">Hysteroscope · Laparoscope</small></div></div></div></section>
+
+<section id="adv"><div class="wrap">
+<div class="tag rv">07 · Advantages &amp; Limitations</div><h2 class="rv">A <span>balanced</span> view</h2>
+<div class="two"><div class="card pro rv"><h3>Advantages</h3><ul class="chk"><li>Direct visualisation of internal structures</li><li>Early identification of abnormalities</li><li>Biopsy and selected therapy</li><li>Can avoid large incisions where appropriate</li><li>May reduce pain and recovery time versus open surgery, depending on procedure and patient</li><li>Image and video documentation</li></ul></div>
+<div class="card con rv"><h3>Limitations</h3><ul><li>Needs specialised equipment and trained staff</li><li>Blood, secretions, debris or poor lighting degrade images</li><li>Some procedures need sedation or anaesthesia</li><li>Risks include bleeding, infection, perforation, anaesthesia complications</li><li>Flexible scopes demand meticulous cleaning and high-level disinfection or sterilisation</li><li>Acquisition, maintenance and reprocessing are costly</li></ul></div></div>
+<blockquote class="rv">Endoscopy improves visualisation and access, but does not eliminate every diagnostic or surgical risk.</blockquote></div></section>
+
+<section id="safety"><div class="wrap">
+<div class="tag rv">08 · Maintenance &amp; Safety</div><h2 class="rv">Reliable, <span>reprocessed</span>, safe</h2>
+<div class="flow rv"><div class="fb">Pre-clean at point of use</div><span class="ar">→</span><div class="fb">Leak test</div><span class="ar">→</span><div class="fb">Clean channels</div><span class="ar">→</span><div class="fb">HLD / sterilise</div><span class="ar">→</span><div class="fb">Dry &amp; store</div><span class="ar">→</span><div class="fb">Document</div></div>
+<div class="grid"><div class="card rv"><h3>Before use</h3><ul><li>Inspect for visible damage</li><li>Check light source, camera, monitor, accessories</li><li>Verify image quality and controls</li><li>Confirm reprocessing was completed</li></ul></div>
+<div class="card rv"><h3>After use</h3><ul><li>Follow manufacturer’s pre-cleaning and transport steps</li><li>Leak-test where applicable</li><li>Validated cleaning, then disinfection or sterilisation per instructions for use</li><li>Document faults; remove unsafe equipment</li></ul></div>
+<div class="card rv"><h3>Electrical &amp; patient safety</h3><ul><li>Inspect cables, connectors, accessories</li><li>Follow electrical safety testing and preventive maintenance</li><li>Train staff in operation and infection prevention</li><li>Report malfunctions promptly</li></ul></div></div>
+<p class="rv"><b>Biomedical engineer’s role:</b> inspection, performance verification, preventive maintenance, troubleshooting, documentation, and coordination with clinical engineering and infection-prevention teams.</p></div></section>
+
+<section id="future"><div class="wrap">
+<div class="tag rv">09 · Future Developments</div><h2 class="rv">What’s <span>next</span></h2>
+<div class="rv"><svg viewBox="0 0 760 150" role="img" aria-label="Capsule endoscopy"><path id="gp" d="M20 75 C120 10 200 140 300 75 S500 10 600 75 S720 120 745 75" fill="none" stroke="rgba(251,113,133,.6)" stroke-width="34" stroke-linecap="round"/><path d="M20 75 C120 10 200 140 300 75 S500 10 600 75 S720 120 745 75" fill="none" stroke="#061427" stroke-opacity=".6" stroke-width="24" stroke-linecap="round"/><g><rect x="-18" y="-9" width="36" height="18" rx="9" fill="#eaf6f6"/><rect x="6" y="-9" width="12" height="18" rx="6" fill="#2dd4bf"/><animateMotion dur="9s" repeatCount="indefinite" rotate="auto"><mpath href="#gp"/></animateMotion></g><text x="380" y="145" fill="#9bb8c4" font-size="12" text-anchor="middle" font-family="sans-serif">Swallowable camera capsule travelling through the digestive tract (schematic)</text></svg></div>
+<div class="grid">
+<div class="card rv"><h3>Artificial intelligence</h3><p>AI-assisted analysis may help flag suspicious lesions; it needs clinical validation and does not replace judgement.</p></div>
+<div class="card rv"><h3>Improved imaging</h3><p>High-definition and narrow-band imaging improve assessment of selected abnormalities.</p></div>
+<div class="card rv"><h3>Robotic systems</h3><p>Better instrument control may improve precision and ergonomics.</p></div>
+<div class="card rv"><h3>Capsule endoscopy</h3><p>Swallowable camera capsules image parts of the digestive tract that are hard to reach conventionally.</p></div>
+<div class="card rv"><h3>Miniaturisation</h3><p>Advances in sensors and electronics support smaller, more capable systems.</p></div></div></div></section>
+
+<section id="end"><div class="wrap">
+<div class="tag rv">10 · Conclusion &amp; References</div><h2 class="rv">Engineering <span>precision</span></h2>
+<p class="rv">Endoscopy combines optical engineering, illumination, imaging electronics and specialised instruments to visualise internal structures, from gastrointestinal diagnosis to minimally invasive surgery. Understanding the principle, components, applications, maintenance and safety is essential for biomedical engineers, and as imaging, AI and minimally invasive systems advance, endoscopy will remain a key area of innovation.</p>
+<h3 class="rv" style="margin-top:30px">References</h3>
+<ol class="rv" style="color:#cfe3e8"><li>Khandpur, R. S., <i>Handbook of Biomedical Instrumentation</i>, McGraw Hill.</li><li>Olympus: educational and technical resources on gastrointestinal endoscopy and equipment.</li><li>World Health Organization: resources on medical device management and maintenance.</li><li>U.S. Food and Drug Administration: guidance on reprocessing reusable medical devices.</li><li>Endoscope manufacturers’ instructions for use, maintenance and reprocessing.</li></ol>
+<blockquote class="rv">“Engineering precision. Enabling visualization. Advancing patient care.”</blockquote></div></section>
+<footer>Hema G | RA2311013010006 | 21BMC402J — Biomedical Equipments for Clinical Applications</footer>
+
+<script>
+const T=[["Gastroscope","Oesophagus, stomach, duodenum: ulcers, bleeding, lesions, biopsy.","M10 20 C60 20 70 90 120 60 S200 20 250 70"],
+["Colonoscope","Large intestine: polyps, bowel abnormalities, biopsy, polyp removal.","M10 90 C50 10 90 110 130 50 S200 100 230 30 S270 80 280 60"],
+["Laparoscope","Rigid; abdominal or pelvic cavity via a small incision, for minimally invasive surgery.","M10 60 H260"],
+["Bronchoscope","Trachea and bronchi: airway evaluation and sampling.","M10 60 H140 M140 60 L210 25 M140 60 L210 95"],
+["Cystoscope","Urethra and bladder; selected urological procedures.","M10 60 H170 L230 30"],
+["Arthroscope","Joint interior (knee, shoulder): selected joint procedures.","M10 60 H210 L240 60"]];
+const tg=document.getElementById('tg');
+T.forEach((t,i)=>{tg.insertAdjacentHTML('beforeend',`<div class="card tc rv"><svg viewBox="0 0 290 120"><path d="${t[2]}" fill="none" stroke="#2dd4bf" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/><path d="${t[2]}" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="dash"/></svg><h3>${i+1}. ${t[0]}</h3><small>${t[1]}</small></div>`)});
+const secs=[...document.querySelectorAll('section')],nav=document.getElementById('nav');
+secs.forEach((s,i)=>{const a=document.createElement('a');a.href='#'+s.id;a.setAttribute('aria-label','Section '+(i+1));nav.appendChild(a)});
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('on')}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const dots=[...nav.children];
+function sc(){const h=document.documentElement,p=scrollY/(h.scrollHeight-innerHeight);document.getElementById('bar').style.width=p*100+'%';
+let k=0;secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<innerHeight/2)k=i});dots.forEach((d,i)=>d.classList.toggle('on',i===k))}
+addEventListener('scroll',sc,{passive:true});sc();
+</script></body></html>
